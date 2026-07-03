@@ -109,6 +109,17 @@ FinPilot
 ---
 
 # 🚀 Tech Stack
+![Python](https://img.shields.io/badge/Python-3.12-blue)
+
+![FastAPI](https://img.shields.io/badge/FastAPI-Backend-green)
+
+![Streamlit](https://img.shields.io/badge/Streamlit-Frontend-red)
+
+![LangGraph](https://img.shields.io/badge/LangGraph-Multi--Agent-orange)
+
+![Gemini](https://img.shields.io/badge/Google-Gemini-purple)
+
+![License](https://img.shields.io/badge/License-MIT-yellow)
 
 ## AI & ML
 
@@ -179,7 +190,7 @@ The executive dashboard provides:
 Clone the repository
 
 ```bash
-git clone https://github.com/your-username/FinPilot.git
+git clone https://github.com/your-username/FinPilot-Enterprise.git.git
 ```
 
 Go to the project directory
