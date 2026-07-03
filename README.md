@@ -213,7 +213,7 @@ python -m streamlit run app/ui/dashboard.py
 <h2>📊 Dashboard</h2>
 
 <p align="center">
-  <img src="assets/dashboard.png" width="900"/>
+  <img src="assets/Dashboard.png" width="900"/>
 </p>
 
 Similarly:
@@ -221,19 +221,19 @@ Similarly:
 <h2>📄 Invoice Center</h2>
 
 <p align="center">
-  <img src="assets/invoice-center.png" width="900"/>
+  <img src="assets/Invoice Center.png" width="900"/>
 </p>
 
 <h2>📈 Analytics</h2>
 
 <p align="center">
-  <img src="assets/analytics.png" width="900"/>
+  <img src="assets/Analytics.png" width="900"/>
 </p>
 
 <h2>🎫 Tickets</h2>
 
 <p align="center">
-  <img src="assets/tickets.png" width="900"/>
+  <img src="assets/Tickets.png" width="900"/>
 </p>
 
 ---
