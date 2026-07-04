@@ -1,62 +1,328 @@
-# 💰 FinPilot Enterprise
+<div align="center">
 
-> **AI-Powered Financial Operations Platform**
+# NexusFlow Enterprise
+### AI-Powered Intelligent Financial Invoice Intelligence Platform
 
-FinPilot Enterprise is an AI-powered financial invoice auditing platform that automates invoice verification, detects amount mismatches, and assists finance teams by reducing manual effort through an intelligent multi-agent workflow.
+<p align="center">
+Enterprise-grade Multi-Agent AI platform that automates invoice verification, financial validation, discrepancy detection, intelligent ticket generation, and executive analytics using LangGraph, Google Gemini, FastAPI, and Streamlit.
+</p>
 
----
+<p align="center">
 
-# ✨ Features
+![Python](https://img.shields.io/badge/Python-3.11-blue)
+![FastAPI](https://img.shields.io/badge/FastAPI-Backend-green)
+![LangGraph](https://img.shields.io/badge/LangGraph-MultiAgent-orange)
+![Gemini](https://img.shields.io/badge/Google-Gemini-red)
+![SQLite](https://img.shields.io/badge/SQLite-Database-lightgrey)
+![Streamlit](https://img.shields.io/badge/Streamlit-Dashboard-ff4b4b)
+![License](https://img.shields.io/badge/License-MIT-blue)
 
-- 📄 Invoice Upload (PDF/Image)
-- 🔍 OCR-based Invoice Extraction
-- 🤖 AI-Powered Invoice Understanding (Google Gemini)
-- 🧠 Multi-Agent Architecture
-- 🔄 LangGraph Workflow Orchestration
-- 💰 Invoice Amount Validation
-- 🎫 Automatic Ticket Creation
-- ✅ Auto-Correction Workflow
-- 📊 Executive Dashboard
-- 📈 Analytics Dashboard
-- 💾 SQLite Database Integration
-- ⚡ FastAPI Backend
-- 🖥️ Streamlit Frontend
+</p>
 
 ---
 
-# 🏗️ System Architecture
+## Table of Contents
+
+- Overview
+- Features
+- Architecture
+- AI Agent Pipeline
+- Workflow
+- Dashboard
+- Project Structure
+- Technologies Used
+- Database Design
+- Installation
+- Running the Project
+- Future Enhancements
+- Author
+
+---
+
+# Overview
+
+NexusFlow Enterprise is an AI-powered financial invoice intelligence platform designed to automate invoice auditing for finance teams.
+
+Instead of manually verifying invoices, checking totals, identifying mismatches, and creating support tickets, NexusFlow performs the entire workflow automatically using a Multi-Agent AI architecture.
+
+The platform combines OCR, Google Gemini, LangGraph orchestration, FastAPI APIs, SQLite storage, and Streamlit dashboards to create an intelligent invoice auditing ecosystem.
+
+The system reduces manual effort, increases auditing accuracy, and provides finance executives with real-time operational insights.
+
+---
+
+# Why NexusFlow?
+
+Traditional invoice verification requires finance teams to
+
+- Read invoices manually
+- Verify totals
+- Compare invoice values
+- Detect inconsistencies
+- Raise support tickets
+- Maintain audit records
+
+NexusFlow automates the complete workflow with AI.
+
+---
+
+# Key Features
+
+## Invoice Processing
+
+- PDF Invoice Upload
+- Image Invoice Upload
+- OCR Text Extraction
+- Structured Invoice Parsing
+- Vendor Identification
+- Invoice Metadata Extraction
+
+---
+
+## AI Intelligence
+
+- Google Gemini Document Understanding
+- Multi-Agent Financial Reasoning
+- Invoice Amount Validation
+- Financial Consistency Checking
+- Intelligent Decision Making
+- Context-aware Invoice Analysis
+
+---
+
+## Workflow Automation
+
+- LangGraph State Machine
+- Automated Validation
+- Auto Correction
+- Ticket Generation
+- Decision Routing
+- Database Synchronization
+
+---
+
+## Dashboard
+
+- Executive KPIs
+- Invoice Analytics
+- Vendor Analytics
+- Ticket Dashboard
+- Decision Distribution
+- Recent Activities
+- AI Summary
+
+---
+
+## Backend
+
+- FastAPI REST APIs
+- SQLite Integration
+- SQLAlchemy ORM
+- Modular Architecture
+- Scalable Services
+
+---
+
+# System Architecture
 
 ```
-                Invoice Upload
-                      │
-                      ▼
-             OCR Extraction Agent
-                      │
-                      ▼
-          Document Processing Agent
-                      │
-                      ▼
-          Financial Validation Agent
-                      │
-          ┌───────────┴───────────┐
-          │                       │
-          ▼                       ▼
-   Auto Correct             Raise Ticket
-          │                       │
-          └───────────┬───────────┘
-                      ▼
-                SQLite Database
-                      │
-                      ▼
-            Streamlit Dashboard
+                    Invoice Upload
+                           │
+                           ▼
+                  OCR Extraction Agent
+                           │
+                           ▼
+               Document Understanding Agent
+                           │
+                           ▼
+               Financial Validation Agent
+                           │
+            ┌──────────────┴──────────────┐
+            │                             │
+            ▼                             ▼
+     Auto Correction Agent          Ticket Agent
+            │                             │
+            └──────────────┬──────────────┘
+                           ▼
+                    SQLite Database
+                           │
+                           ▼
+                 Executive Dashboard
 ```
 
 ---
 
-# 🧠 AI Workflow
+# AI Agent Architecture
+
+NexusFlow is built using a Multi-Agent Architecture powered by LangGraph.
+
+Each agent performs a dedicated responsibility within the workflow.
+
+---
+
+## 1. OCR Agent
+
+Responsibilities
+
+- Reads uploaded invoice
+- Extracts raw text
+- Converts scanned documents into machine-readable format
+
+Input
+
+Invoice PDF/Image
+
+Output
+
+Extracted invoice text
+
+---
+
+## 2. Document Intelligence Agent
+
+Powered by Google Gemini
+
+Responsibilities
+
+- Understand invoice context
+- Extract vendor details
+- Extract invoice number
+- Extract total amount
+- Extract taxes
+- Extract line items
+
+Output
+
+Structured Invoice JSON
+
+---
+
+## 3. Financial Validation Agent
+
+Responsibilities
+
+- Verify invoice totals
+- Validate calculations
+- Detect amount mismatches
+- Identify inconsistencies
+
+Decision
+
+- Valid Invoice
+- Invalid Invoice
+
+---
+
+## 4. Decision Agent
+
+Business Logic
+
+If invoice is correct
+
+→ Auto Correction
+
+Else
+
+→ Raise Financial Ticket
+
+---
+
+## 5. Storage Agent
+
+Responsibilities
+
+- Save invoice
+- Save validation result
+- Save ticket
+- Update dashboard
+
+---
+
+# LangGraph Workflow
 
 ```
 Invoice
+
+   │
+
+   ▼
+
+OCR Agent
+
+   │
+
+   ▼
+
+Document Agent
+
+   │
+
+   ▼
+
+Finance Agent
+
+   │
+
+   ▼
+
+Decision Agent
+
+   │
+
+   ▼
+
+Database
+
+   │
+
+   ▼
+
+Dashboard
+```
+
+The workflow is orchestrated using LangGraph, enabling modular, scalable, and state-driven execution where every agent focuses on a single responsibility.
+
+---
+
+# Dashboard
+
+The Streamlit Dashboard provides executive insights including
+
+### Executive KPIs
+
+- Total Invoices
+- Vendors
+- Amount Audited
+- Open Tickets
+- Auto Corrections
+- Validation Accuracy
+
+---
+
+### Analytics
+
+- Vendor Spending
+- Monthly Invoice Trends
+- Invoice Distribution
+- Ticket Analysis
+- Decision Distribution
+- Highest Invoice Amount
+- Average Invoice Value
+
+---
+
+### Activity
+
+- Latest Processed Invoices
+- Recent Tickets
+- AI Validation Summary
+
+---
+
+# Workflow
+
+```
+Upload Invoice
 
 ↓
 
@@ -64,69 +330,81 @@ OCR Extraction
 
 ↓
 
-Document Agent
+Gemini Understanding
 
 ↓
 
-Finance Agent
+Invoice Parsing
 
 ↓
 
-Action Agent
+Financial Validation
 
 ↓
 
-Database
+Decision Engine
 
 ↓
 
-Dashboard & Analytics
+Auto Correct
+        OR
+Raise Ticket
+
+↓
+
+Save Database
+
+↓
+
+Update Dashboard
 ```
 
 ---
 
-# 📂 Project Structure
+# Project Structure
 
 ```
-FinPilot
+NexusFlow/
 │
-├── app
-│   ├── agents
-│   ├── api
-│   ├── core
-│   ├── database
-│   ├── schemas
-│   ├── tools
-│   ├── ui
-│   └── workflow
+├── app/
 │
-├── uploads
-├── tests
+├── agents/
+│   ├── ocr_agent.py
+│   ├── document_agent.py
+│   ├── finance_agent.py
+│   ├── action_agent.py
+│
+├── api/
+│
+├── workflow/
+│
+├── database/
+│
+├── schemas/
+│
+├── ui/
+│
+├── uploads/
+│
+├── tests/
+│
 ├── requirements.txt
+│
 └── README.md
 ```
 
 ---
 
-# 🚀 Tech Stack
-![Python](https://img.shields.io/badge/Python-3.12-blue)
+# Technologies Used
 
-![FastAPI](https://img.shields.io/badge/FastAPI-Backend-green)
-
-![Streamlit](https://img.shields.io/badge/Streamlit-Frontend-red)
-
-![LangGraph](https://img.shields.io/badge/LangGraph-Multi--Agent-orange)
-
-![Gemini](https://img.shields.io/badge/Google-Gemini-purple)
-
-![License](https://img.shields.io/badge/License-MIT-yellow)
-
-## AI & ML
+## Artificial Intelligence
 
 - Google Gemini
 - LangGraph
 - OCR
 - Multi-Agent AI
+
+---
 
 ## Backend
 
@@ -135,10 +413,14 @@ FinPilot
 - SQLite
 - Pydantic
 
+---
+
 ## Frontend
 
 - Streamlit
 - Plotly
+
+---
 
 ## Programming
 
@@ -146,144 +428,141 @@ FinPilot
 
 ---
 
-# 📊 Dashboard
+# Database
 
-The executive dashboard provides:
+SQLite stores
 
-- Total Invoices Processed
-- Money Audited
-- Vendor Count
-- Ticket Statistics
-- Invoice Analytics
-- Decision Distribution
-- AI Summary
-- Recent Invoice Activity
+- Invoice Details
+- Vendor Information
+- Validation Results
+- Ticket Status
+- AI Decisions
+- Audit Logs
 
 ---
 
-# 🎯 Workflow
+# Installation
 
-1. Upload Invoice
-2. OCR extracts invoice information
-3. Gemini validates financial data
-4. AI compares invoice details
-5. Auto Correct if valid
-6. Raise Ticket if mismatch detected
-7. Store results in SQLite
-8. Display analytics on dashboard
-
----
-
-# 📈 Analytics
-
-- Vendor Spending Analysis
-- Invoice Distribution
-- Auto Correct Rate
-- Ticket Statistics
-- Average Invoice Value
-- Highest Invoice Amount
-
----
-
-# 🛠 Installation
-
-Clone the repository
+Clone Repository
 
 ```bash
-git clone https://github.com/your-username/FinPilot-Enterprise.git.git
+git clone https://github.com/manasaavarmaa/NexusFlow.git
 ```
 
-Go to the project directory
+Move into Project
 
 ```bash
-cd FinPilot
+cd NexusFlow
 ```
 
-Install dependencies
+Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Run FastAPI
+Run Backend
 
 ```bash
 python run_api.py
 ```
 
-Run Streamlit
+Run Dashboard
 
 ```bash
-python -m streamlit run app/ui/dashboard.py
+streamlit run app/ui/dashboard.py
 ```
 
 ---
 
-# 📷 Screenshots
+# Dashboard Pages
 
-<h2>📊 Dashboard</h2>
-
-<p align="center">
-  <img src="assets/Dashboard.png" width="900"/>
-</p>
-
-Similarly:
-
-<h2>📄 Invoice Center</h2>
-
-<p align="center">
-  <img src="assets/Invoice Center.png" width="900"/>
-</p>
-
-<h2>📈 Analytics</h2>
-
-<p align="center">
-  <img src="assets/Analytics.png" width="900"/>
-</p>
-
-<h2>🎫 Tickets</h2>
-
-<p align="center">
-  <img src="assets/Tickets.png" width="900"/>
-</p>
+- Executive Dashboard
+- Invoice Center
+- Analytics Dashboard
+- Ticket Center
+- Vendor Insights
+- AI Summary
 
 ---
 
-# 🔮 Future Enhancements
+# Screenshots
+
+## Executive Dashboard
+
+(Add Screenshot)
+
+---
+
+## Invoice Center
+
+(Add Screenshot)
+
+---
+
+## Analytics Dashboard
+
+(Add Screenshot)
+
+---
+
+## Ticket Management
+
+(Add Screenshot)
+
+---
+
+# Future Enhancements
 
 - Purchase Order Matching
-- Vendor Risk Analysis
-- AI Copilot for Finance Teams
-- Fraud Detection
-- Email Notifications
-- Authentication & Role-Based Access
+- ERP Integration
+- SAP Integration
+- Vendor Risk Scoring
+- Fraud Detection AI
+- Role-Based Authentication
 - PostgreSQL Support
 - Docker Deployment
-- Cloud Deployment (AWS/Azure)
+- Kubernetes Deployment
+- AWS Deployment
+- Azure Deployment
+- Email Notifications
+- Slack Integration
+- Predictive Invoice Analytics
 
 ---
 
-# 💡 Key Highlights
+# Highlights
 
-- Enterprise-inspired financial workflow
-- AI-assisted invoice validation
-- Multi-Agent architecture using LangGraph
-- Intelligent decision engine
-- Automated ticket generation
-- Executive analytics dashboard
-- Modular and scalable backend
+- Enterprise-inspired Financial Platform
+- Multi-Agent AI Architecture
+- LangGraph Workflow Orchestration
+- Google Gemini Integration
+- Automated Invoice Validation
+- Intelligent Ticket Generation
+- Executive Analytics Dashboard
+- Modular Scalable Architecture
+- Production-ready Backend Design
 
 ---
 
-# 👩‍💻 Author
+# Author
 
-**Samanuri Sri Manasa Varma**
+## Samanuri Sri Manasa Varma
 
 AI & Machine Learning Engineer
 
-- GitHub: https://github.com/manasaavarmaa
-- LinkedIn: https://www.linkedin.com/in/smanasavarma/
+GitHub
+
+https://github.com/manasaavarmaa
+
+LinkedIn
+
+https://www.linkedin.com/in/smanasavarma/
+
+Portfolio
+
+https://manasaportfolio-six.vercel.app
 
 ---
 
-# ⭐ If you found this project interesting, consider giving it a Star!
+If you found this project helpful, consider giving it a ⭐ on GitHub!
